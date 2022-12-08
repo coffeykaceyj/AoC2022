@@ -10,10 +10,8 @@ scenic_scores = []
 def count_trees_seen(current_tree, trees):
     tree_count = 0
     for tree in trees:
-        if tree < current_tree:
-            tree_count +=1
+        tree_count += 1
         if tree >= current_tree:
-            tree_count += 1
             break
 
     return tree_count
@@ -37,7 +35,6 @@ def tree_scenic_score(row_index, column_index):
 
 for line in input:
     row = [int(i) for i in line]
-    visibility_row = [False for i in line]
     forest_heights.append(row)
 
 for i in range(len(forest_heights[0])):
